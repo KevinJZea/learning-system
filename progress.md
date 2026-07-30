@@ -2,6 +2,8 @@
 
 Mastery is evidence-based. Do not raise scores without demonstrated understanding in a session.
 
+**Status, mastery, Bloom, and `next_review` live only in `curriculum/INDEX.md`.** This file holds scales, review rules, weak areas, and the session log.
+
 ## Scale
 
 | Mastery | Meaning |
@@ -17,17 +19,27 @@ Bloom levels: Knowledge → Understanding → Application → Analysis → Evalu
 
 Status: `not_started` | `in_progress` | `review` | `mastered`
 
-## Topics
+## Review intervals
 
-| Topic | Slug | Status | Mastery | Bloom | Last reviewed | Notes |
-|-------|------|--------|---------|-------|---------------|-------|
-| — | — | — | — | — | — | No topics recorded yet |
+When mastery or last_reviewed changes, set `next_review` = today + interval for current mastery:
+
+| Mastery | Interval |
+|---------|----------|
+| 1/5 | +3 days |
+| 2/5 | +1 week |
+| 3/5 | +2 weeks |
+| 4/5 | +1 month |
+| 5/5 | +3 months |
+
+Adjust intervals if retention evidence says they are too aggressive or too loose. Unstarted topics (0/5) have no `next_review`.
 
 ## Weak areas / open gaps
 
 - None recorded yet (system just initialized)
 
 ## Recent sessions
+
+Keep the last ~10 rows. Older rows may be dropped once reflected in topic files and INDEX.
 
 | Date | Topic | Outcome |
 |------|-------|---------|
@@ -37,8 +49,8 @@ Status: `not_started` | `in_progress` | `review` | `mastered`
 
 After a non-trivial lesson:
 
-1. Add or edit the row in **Topics**
-2. Set mastery and Bloom only from evidence this session + prior notes
-3. Append a line under **Recent sessions**
-4. Mirror status/mastery in `curriculum/INDEX.md`
-5. Keep detail in `topics/<slug>.md`
+1. Update `topics/<slug>.md` (detail + status block including `next_review`)
+2. Update the row in `curriculum/INDEX.md` (status, mastery, Bloom, last reviewed, next review)
+3. Append a line under **Recent sessions** here; trim to ~10
+4. Update **Weak areas** if a new gap or closed gap is clear
+5. Propose commit: `session(<slug>): <summary>`

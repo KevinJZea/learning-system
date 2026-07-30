@@ -59,4 +59,4 @@ Last updated: 2026-07-29
 ## Notes
 
 - Update this file when goals, baseline skills, or preferences change in a lasting way
-- Session-to-session mastery belongs in `progress.md` and `topics/`, not here
+- Session-to-session mastery belongs in `curriculum/INDEX.md` and `topics/`, not here

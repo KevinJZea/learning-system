@@ -7,7 +7,10 @@
 - **mastery:** 0/5
 - **bloom:** —
 - **last_reviewed:** YYYY-MM-DD
+- **next_review:** YYYY-MM-DD
 - **prerequisites:** (slugs or plain names)
+
+<!-- Mirror status/mastery/next_review into curriculum/INDEX.md (INDEX is the map-level source of truth). -->
 
 ## Why it exists
 
@@ -54,6 +57,8 @@
 - 
 
 ## Session log
+
+<!-- When this section grows long, compress older entries into a short summary list and keep full detail only for recent sessions. -->
 
 ### YYYY-MM-DD
 
